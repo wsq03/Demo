@@ -34,6 +34,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     private void setListViewHight(ListView listView) {
+        //
         ListAdapter adapter = listView.getAdapter();
         if (adapter == null) {
             return;
