@@ -30,9 +30,7 @@ public class Main2Activity extends AppCompatActivity {
         }
         mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, data);
         mList.setAdapter(mAdapter);
-        setListViewHight(mList);
-
-
+         setListViewHight(mList);
     }
 
     private void setListViewHight(ListView listView) {
@@ -47,7 +45,7 @@ public class Main2Activity extends AppCompatActivity {
             //计算子项View的宽高
             listltem.measure(0, 0);
             //统计所有子项的高度
-            tiotalHight = listltem.getMeasuredHeight();
+            tiotalHight += listltem.getMeasuredHeight();
         }
         ViewGroup.LayoutParams params = listView.getLayoutParams();
         //listView.getDividerHeight()获取子项间分隔符占用的高度
